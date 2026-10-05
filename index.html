@@ -301,7 +301,126 @@
             box-shadow: 0 5px 30px rgba(37, 211, 102, 0.5);
             transform: translateY(-3px) scale(1.02);
         }
+        .link-item:nth-child(5) { animation-delay: 0.7s; }
 
+.ticket-link {
+    background: linear-gradient(135deg, #D4AF37 0%, #8B4513 100%);
+    border: 1px solid #D4AF37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.ticket-link:hover {
+    box-shadow: 0 5px 30px rgba(212, 175, 55, 0.5);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.ticket-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    border-radius: 6px;
+    background: rgba(212, 175, 55, 0.06);
+    border: 1px solid transparent;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+}
+
+.ticket-panel.active {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 0.875rem;
+    padding: 1.25rem 1.5rem;
+    border-color: rgba(212, 175, 55, 0.35);
+}
+
+.ticket-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.ticket-panel-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #D4AF37;
+}
+
+.ticket-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 0.25rem;
+}
+
+.ticket-close:hover {
+    color: var(--text-primary);
+}
+
+.ticket-prices {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.ticket-price-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.ticket-price-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+}
+
+.ticket-price-value {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: #D4AF37;
+}
+
+.ticket-venues-title {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 0.6rem;
+}
+
+.ticket-venues-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ticket-venues-list li {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    position: relative;
+    color: var(--text-primary);
+}
+
+.ticket-venues-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #D4AF37;
+}
         .social-icons {
             display: flex;
             justify-content: center;
