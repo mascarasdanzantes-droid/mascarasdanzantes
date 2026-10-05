@@ -338,13 +338,60 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.ticket-panel-titlewrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.ticket-artist-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #D4AF37;
+    background: rgba(212, 175, 55, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-artist-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ticket-artist-photo .icon-svg {
+    width: 20px;
+    height: 20px;
+    color: #D4AF37;
+}
+
+.ticket-panel-titles {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 .ticket-panel-title {
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
     color: #D4AF37;
+    line-height: 1.3;
+}
+
+.ticket-panel-subtitle {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
 }
 
 .ticket-close {
@@ -355,6 +402,7 @@
     line-height: 1;
     cursor: pointer;
     padding: 0 0.25rem;
+    flex-shrink: 0;
 }
 
 .ticket-close:hover {
@@ -503,6 +551,41 @@
                         <span class="link-arrow">→</span>
                     </div>
                 </a>
+                            <div id="ticket-panel" class="ticket-panel">
+                <div class="ticket-panel-header">
+                    <div class="ticket-panel-titlewrap">
+                        <div class="ticket-artist-photo">
+                            <svg viewBox="0 0 24 24" class="icon-svg">
+                                <path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 006 6.92V21h2v-3.08A7 7 0 0019 11h-2z"/>
+                            </svg>
+                        </div>
+                        <div class="ticket-panel-titles">
+                            <span class="ticket-panel-title">Boletos</span>
+                            <span class="ticket-panel-subtitle">Edwin Luna y La Trakalosa de Monterrey</span>
+                        </div>
+                    </div>
+                    <button class="ticket-close" onclick="toggleTickets(event)" aria-label="Cerrar">&times;</button>
+                </div>
+                <div class="ticket-prices">
+                    <div class="ticket-price-item">
+                        <span class="ticket-price-label">General</span>
+                        <span class="ticket-price-value">$300</span>
+                    </div>
+                    <div class="ticket-price-item">
+                        <span class="ticket-price-label">VIP</span>
+                        <span class="ticket-price-value">$3,000</span>
+                    </div>
+                </div>
+                <div class="ticket-venues">
+                    <span class="ticket-venues-title">Puntos de venta</span>
+                    <ul class="ticket-venues-list">
+                        <li>Súper Tortas Orizabeñas — Sucursal Madero</li>
+                        <li>Hotel Gama</li>
+                        <li>Hotel Holiday Inn</li>
+                        <li>Madison Poliforum</li>
+                    </ul>
+                </div>
+            </div>
                 <a href="https://wa.link/a4dob2" class="link-item whatsapp-link">
                     <div class="link-content">
                         <div class="link-icon">
@@ -552,31 +635,7 @@
                 </a>
             </div>
 
-                        <div id="ticket-panel" class="ticket-panel">
-                <div class="ticket-panel-header">
-                    <span class="ticket-panel-title">Venta de Boletos</span>
-                    <button class="ticket-close" onclick="toggleTickets(event)" aria-label="Cerrar">&times;</button>
-                </div>
-                <div class="ticket-prices">
-                    <div class="ticket-price-item">
-                        <span class="ticket-price-label">General</span>
-                        <span class="ticket-price-value">$300</span>
-                    </div>
-                    <div class="ticket-price-item">
-                        <span class="ticket-price-label">VIP</span>
-                        <span class="ticket-price-value">$3,000</span>
-                    </div>
-                </div>
-                <div class="ticket-venues">
-                    <span class="ticket-venues-title">Puntos de venta</span>
-                    <ul class="ticket-venues-list">
-                        <li>Súper Tortas Orizabeñas — Sucursal Madero</li>
-                        <li>Hotel Gama</li>
-                        <li>Hotel Holiday Inn</li>
-                        <li>Madison Poliforum</li>
-                    </ul>
-                </div>
-            </div>
+                       
             
             <div class="social-icons">
                 <a href="https://www.instagram.com/mascarasdanzantes/" class="social-icon" target="_blank" title="Instagram">
